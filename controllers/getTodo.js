@@ -21,7 +21,6 @@ exports.getTodoById = async(request, response) => {
 
         response.status(200).json({success: true, data: todos, message: `Data found for given id: ${id}`});
     } catch(err) {
-        console.error(err);
         response.status(500).json({success: false, response: "Request Failed", message: err.message});
     }
 }
